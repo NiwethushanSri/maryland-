@@ -31,6 +31,26 @@ export default function Careers() {
         </div>
       </section>
 
+      {/* Why we're hiring */}
+      <section className="py-14 lg:py-16 bg-slate-50">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-slate-100 bg-white p-6 sm:p-8 shadow-sm">
+            <h2 className="text-2xl font-extrabold text-slate-900">Where we're heading</h2>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              Maryland Internet Cafe is going through an exciting period of restructuring and
+              expansion. We are reducing our internet café area and introducing significantly more
+              electronics, mobile and accessory stock, researching new products, developing supplier
+              relationships and growing our product lines. Alongside this we are improving our
+              marketing and looking to expand our repair and technical services.
+            </p>
+            <p className="mt-3 text-slate-600 leading-relaxed">
+              These roles are central to that transformation, offering a real opportunity to help
+              shape the future direction of the business.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Open roles */}
       <section className="py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -42,7 +62,7 @@ export default function Careers() {
             })()}
           </p>
 
-          <div className="mt-10 grid gap-8 lg:grid-cols-2">
+          <div className="mt-10 grid gap-8">
             {JOBS.map((job) => {
               const Icon = Icons[job.icon] || BriefcaseIcon
               return (
@@ -91,14 +111,14 @@ export default function Careers() {
 
                   <p className="mt-5 text-slate-600 leading-relaxed">{job.summary}</p>
 
-                  <div className="mt-6 grid gap-6 sm:grid-cols-2">
-                    <div>
+                  <div className="mt-6 grid gap-8 lg:grid-cols-3">
+                    <div className="lg:col-span-2">
                       <h4 className="text-sm font-bold uppercase tracking-wide text-slate-500">
                         What you'll do
                       </h4>
-                      <ul className="mt-3 space-y-2">
+                      <ul className="mt-3 grid gap-x-8 gap-y-2 sm:grid-cols-2">
                         {job.responsibilities.map((r) => (
-                          <li key={r} className="flex items-start gap-2 text-sm text-slate-700">
+                          <li key={r} className="flex items-start gap-2 text-left text-sm text-slate-700">
                             <CheckIcon
                               className="mt-0.5 h-4 w-4 shrink-0 text-brand-600"
                               width="16"
@@ -115,7 +135,7 @@ export default function Careers() {
                       </h4>
                       <ul className="mt-3 space-y-2">
                         {job.requirements.map((r) => (
-                          <li key={r} className="flex items-start gap-2 text-sm text-slate-700">
+                          <li key={r} className="flex items-start gap-2 text-left text-sm text-slate-700">
                             <CheckIcon
                               className="mt-0.5 h-4 w-4 shrink-0 text-brand-600"
                               width="16"
@@ -174,25 +194,52 @@ function ApplicationForm({ role, setRole }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const subject = `Job Application: ${role || 'General'}, ${form.name}`
-    const body = [
-      `Position: ${role || 'General application'}`,
-      `Name: ${form.name}`,
-      `Email: ${form.email}`,
-      `Phone: ${form.phone}`,
-      '',
-      'Message / experience:',
-      form.message,
-    ].join('\n')
-    const href = `mailto:${BUSINESS.careersEmail}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`
-    window.location.href = href
+    // Mock submission: acknowledge the applicant with a thank-you message.
     setSent(true)
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: window.scrollY, behavior: 'instant' in window ? 'instant' : 'auto' })
+    }
   }
 
   const field =
     'mt-1 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100'
+
+  if (sent) {
+    return (
+      <div className="mt-8 rounded-2xl border border-brand-100 bg-white p-8 text-center shadow-sm">
+        <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-green-100 text-green-700">
+          <CheckIcon className="h-8 w-8" width="32" height="32" />
+        </div>
+        <h3 className="mt-5 text-2xl font-extrabold text-slate-900">
+          Thank you for your application!
+        </h3>
+        <p className="mx-auto mt-3 max-w-lg text-slate-600 leading-relaxed">
+          {form.name ? `Thanks, ${form.name.split(' ')[0]}. ` : ''}We have received your application
+          {role ? ` for the ${role} role` : ''}. Our team will review it and get in touch with you
+          soon using the contact details you provided.
+        </p>
+        <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+          <a
+            href={BUSINESS.phoneHref}
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-6 py-3 font-semibold text-white hover:bg-brand-800 transition-colors"
+          >
+            <PhoneIcon className="h-5 w-5" width="18" height="18" /> Call {BUSINESS.phone}
+          </a>
+          <button
+            type="button"
+            onClick={() => {
+              setForm({ name: '', email: '', phone: '', message: '' })
+              setRole('')
+              setSent(false)
+            }}
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-brand-800 ring-1 ring-slate-200 hover:bg-slate-50 transition-colors"
+          >
+            Submit another application
+          </button>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <form onSubmit={handleSubmit} className="mt-8 space-y-5">
@@ -238,10 +285,6 @@ function ApplicationForm({ role, setRole }) {
         />
       </div>
 
-      <p className="text-xs text-slate-500">
-        Please attach your CV in the email that opens after you submit.
-      </p>
-
       <div className="flex flex-col sm:flex-row gap-3">
         <button
           type="submit"
@@ -256,16 +299,6 @@ function ApplicationForm({ role, setRole }) {
           <PhoneIcon className="h-5 w-5" width="18" height="18" /> Or call {BUSINESS.phone}
         </a>
       </div>
-
-      {sent && (
-        <p className="rounded-xl bg-brand-50 px-4 py-3 text-sm font-medium text-brand-800">
-          Your email app should have opened with your application. If it didn't, email us directly at{' '}
-          <a className="underline" href={`mailto:${BUSINESS.careersEmail}`}>
-            {BUSINESS.careersEmail}
-          </a>
-          .
-        </p>
-      )}
     </form>
   )
 }

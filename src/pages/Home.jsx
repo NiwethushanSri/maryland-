@@ -67,13 +67,28 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mt-14 rounded-2xl bg-white p-4 sm:p-6 shadow-xl ring-1 ring-black/5">
-          <img
-            src="/banner.jpg"
-            alt="Our services, internet surfing, printing & scanning, electronic items, mobile phones, mobile accessories, stationery and DHL parcel service (drop & pickup)"
-            className="w-full"
-            loading="eager"
-          />
+      </div>
+    </section>
+  )
+}
+
+function ServicesBanner() {
+  const alt =
+    'Our services, electronic items, mobile phones, mobile phone accessories, internet surfing, printing & scanning, stationery, DHL parcel service, Western Union, Ria and MoneyGram'
+  return (
+    <section className="bg-white py-6 sm:py-8">
+      <div className="marquee overflow-hidden">
+        <div className="marquee-track items-center">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <img
+              key={i}
+              src="/banner.jpg"
+              alt={i === 0 ? alt : ''}
+              aria-hidden={i === 0 ? undefined : 'true'}
+              className="mx-10 h-40 w-auto max-w-none shrink-0 sm:h-56 lg:h-72"
+              loading="eager"
+            />
+          ))}
         </div>
       </div>
     </section>
@@ -338,6 +353,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <ServicesBanner />
       <Services />
       <MoneyTransfer />
       <AboutPreview />

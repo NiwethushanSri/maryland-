@@ -85,11 +85,18 @@ export const JOBS = [
     summary:
       'Lead the growth of Maryland Internet Cafe by developing marketing campaigns, building local partnerships and driving commercial performance across all of our services.',
     responsibilities: [
-      'Plan and deliver marketing campaigns across social media, online listings and in-store promotions',
-      'Grow awareness of our money transfer, DHL, printing, internet and mobile services',
-      'Manage the Google Business profile, reviews and local advertising',
-      'Identify new commercial opportunities and partnerships in the local community',
-      'Track performance, budgets and report on results',
+      'Research the UK market for emerging consumer electronics, mobile phones, smart devices and mobile accessories and identify commercially viable products for introduction into the business',
+      'Develop and implement the commercial strategy for expanding the electronics and mobile-accessories side of the business',
+      'Analyse existing use of retail floor space and support the planned transition away from declining internet-surfing services towards higher-demand electronic products and services',
+      'Research customer demand, competitor pricing, product trends and local market conditions to determine appropriate product ranges',
+      'Identify and develop relationships with electronics, mobile-phone and accessory suppliers, wholesalers and distributors',
+      'Evaluate supplier pricing, margins, minimum order quantities and commercial terms and make purchasing recommendations to the proprietor',
+      'Develop pricing and promotional strategies for new and existing product ranges',
+      'Plan product launches, seasonal promotions, local advertising and digital/social-media marketing campaigns',
+      'Analyse sales, gross margins and product performance and recommend which ranges should be expanded, reduced or discontinued',
+      'Develop cross-selling opportunities between electronics, mobile accessories, mobile repair and the shop’s existing services',
+      'Review opportunities to commercially develop existing services including money transfer, parcel services, printing and related customer services',
+      'Prepare periodic commercial and sales-performance reports for the proprietor and make recommendations for future business expansion',
     ],
     requirements: [
       'Proven experience in marketing, sales or commercial management',
