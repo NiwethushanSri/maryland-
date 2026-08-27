@@ -15,7 +15,7 @@ const FEATURES = [
     icon: GlobeIcon,
     title: 'Internet Surfing',
     intro:
-      'Need quick access to the internet? Use our computers to browse websites and access the online services you need — for a few minutes or a longer task.',
+      'Need quick access to the internet? Use our computers to browse websites and access the online services you need, for a few minutes or a longer task.',
     items: [
       'General web browsing',
       'Online research',
@@ -214,7 +214,7 @@ export default function Internet() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden pt-16">
+      <section className="relative overflow-hidden pt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-800 via-brand-700 to-brand-900" />
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-brand-400/20 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-24 text-white">
@@ -226,7 +226,7 @@ export default function Internet() {
           </h1>
           <p className="mt-4 text-lg text-brand-100/90 max-w-2xl">
             Convenient, easy-to-use computer and internet facilities for personal, professional,
-            educational or everyday online tasks — from our convenient Stratford location.
+            educational or everyday online tasks, from our convenient Stratford location.
           </p>
         </div>
       </section>
@@ -283,7 +283,7 @@ export default function Internet() {
               One of the biggest advantages of Maryland Internet Cafe is having computer, internet,
               printing and scanning facilities in the same location. Work on your document, download
               it, print it, sign it if necessary, scan it and prepare it for email or online
-              submission — all from one convenient location.
+              submission, all from one convenient location.
             </p>
           </div>
           <ul className="grid sm:grid-cols-2 gap-3">

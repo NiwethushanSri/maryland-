@@ -84,7 +84,7 @@ export default function MoneyTransfer() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden pt-16">
+      <section className="relative overflow-hidden pt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-800 via-brand-700 to-brand-900" />
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-accent-500/20 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-24 text-white">
@@ -95,7 +95,7 @@ export default function MoneyTransfer() {
             Send Money Worldwide with Confidence
           </h1>
           <p className="mt-4 text-lg text-brand-100/90 max-w-2xl">
-            Simple, convenient international money transfers for our local community — from some of
+            Simple, convenient international money transfers for our local community, from some of
             the world's recognised providers, with friendly in-person assistance.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">

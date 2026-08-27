@@ -36,7 +36,7 @@ export default function About() {
   return (
     <>
       {/* Page header */}
-      <section className="relative overflow-hidden pt-16">
+      <section className="relative overflow-hidden pt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-800 via-brand-700 to-brand-900" />
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-brand-400/20 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-24 text-white">
@@ -45,7 +45,7 @@ export default function About() {
             About Maryland Internet Cafe
           </h1>
           <p className="mt-4 text-lg text-brand-100/90 max-w-2xl">
-            Your trusted local service hub in Stratford — everyday essential services made simple,
+            Your trusted local service hub in Stratford, everyday essential services made simple,
             convenient and accessible.
           </p>
         </div>
@@ -147,9 +147,9 @@ export default function About() {
           <h2 className="text-3xl sm:text-4xl font-extrabold">More Than an Internet Cafe</h2>
           <p className="mt-4 text-brand-100/90 leading-relaxed">
             Maryland Internet Cafe has grown into a one-stop local service hub for the Stratford and
-            Maryland community. Whatever brings you through our door — sending money to family abroad,
+            Maryland community. Whatever brings you through our door, sending money to family abroad,
             printing an important document, collecting a parcel or finding the right mobile accessory
-            — you can expect convenient and welcoming service.
+           , you can expect convenient and welcoming service.
           </p>
           <p className="mt-6 text-lg font-semibold text-brand-200">Local. Convenient. Connected.</p>
 

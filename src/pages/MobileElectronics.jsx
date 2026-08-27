@@ -29,7 +29,7 @@ const PHONE_CARDS = [
   },
   {
     title: 'Everyday Communication Devices',
-    text: 'Modern mobile phones are essential for much more than making calls — they help you stay connected for the things that matter. Visit us to explore the devices currently available.',
+    text: 'Modern mobile phones are essential for much more than making calls, they help you stay connected for the things that matter. Visit us to explore the devices currently available.',
   },
   {
     title: 'Helpful In-Store Advice',
@@ -69,7 +69,7 @@ const ACCESSORIES = [
   },
   {
     title: 'Phone Cases',
-    text: 'Protect your mobile phone from everyday knocks, scratches and general wear. We may carry cases for a selection of popular phone models — bring your device or tell us the exact model and we’ll help check compatibility.',
+    text: 'Protect your mobile phone from everyday knocks, scratches and general wear. We may carry cases for a selection of popular phone models, bring your device or tell us the exact model and we’ll help check compatibility.',
   },
   {
     title: 'Screen Protectors',
@@ -77,7 +77,7 @@ const ACCESSORIES = [
   },
   {
     title: 'Adapters & Connectors',
-    text: 'Sometimes the smallest accessory is the one you need most. Our selection may include useful adapters and connectors for charging and connecting your devices — ask our team if you’re looking for a particular connection.',
+    text: 'Sometimes the smallest accessory is the one you need most. Our selection may include useful adapters and connectors for charging and connecting your devices, ask our team if you’re looking for a particular connection.',
   },
 ]
 
@@ -139,7 +139,7 @@ export default function MobileElectronics() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden pt-16">
+      <section className="relative overflow-hidden pt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-800 via-brand-700 to-brand-900" />
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-brand-400/20 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-24 text-white">
@@ -165,7 +165,7 @@ export default function MobileElectronics() {
             our team.
           </p>
           <p>
-            Our aim is to make it easy to find the technology essentials you need locally — without
+            Our aim is to make it easy to find the technology essentials you need locally, without
             having to travel far.
           </p>
         </div>
@@ -271,7 +271,7 @@ export default function MobileElectronics() {
             <h3 className="text-xl font-bold text-slate-900">Not Sure What Accessory You Need?</h3>
             <p className="mt-3 text-sm leading-relaxed text-slate-600">
               Different phones and devices can use different cables, connectors and charging
-              standards. If you're unsure, bring your device where possible — our team can help you
+              standards. If you're unsure, bring your device where possible, our team can help you
               identify the type of accessory you require and show you compatible options. We always
               recommend checking compatibility before purchasing.
             </p>

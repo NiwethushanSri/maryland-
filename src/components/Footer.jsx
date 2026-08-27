@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid gap-10 md:grid-cols-3">
         <div>
           <div className="inline-flex rounded-lg bg-white p-3">
-            <img src="/logo.png" alt="Maryland Internet Cafe" className="h-10 w-auto" />
+            <img src="/logo.png" alt="Maryland Internet Cafe" className="h-14 w-auto" />
           </div>
           <p className="mt-4 text-sm text-slate-400">
             Internet, money transfer, mobile, printing &amp; parcel services in Stratford.
@@ -18,13 +18,28 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-white">Explore</h4>
           <ul className="mt-4 space-y-2 text-sm">
-            {NAV.map((n) => (
-              <li key={n.label}>
-                <Link to={n.to} className="hover:text-white transition-colors">
-                  {n.label}
-                </Link>
-              </li>
-            ))}
+            {NAV.map((n) =>
+              n.children ? (
+                <li key={n.label}>
+                  <span className="text-slate-400">{n.label}</span>
+                  <ul className="mt-2 space-y-2 pl-3">
+                    {n.children.map((c) => (
+                      <li key={c.label}>
+                        <Link to={c.to} className="hover:text-white transition-colors">
+                          {c.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ) : (
+                <li key={n.label}>
+                  <Link to={n.to} className="hover:text-white transition-colors">
+                    {n.label}
+                  </Link>
+                </li>
+              ),
+            )}
           </ul>
         </div>
 

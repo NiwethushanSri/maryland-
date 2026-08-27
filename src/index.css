@@ -11,7 +11,46 @@ body {
 }
 
 section {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 6rem;
+}
+
+/* Justify body paragraph text on wider screens only.
+   Narrow columns (mobile, small cards) keep their own alignment so the
+   spacing doesn't stretch. Utility classes like `text-left`/`text-center`
+   on a paragraph always win over this rule. */
+@media (min-width: 768px) {
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+}
+
+/* Keep inline pill/badge paragraphs centered rather than justified. */
+p.inline-flex {
+  text-align: center;
+}
+
+/* Animated underline for the desktop navigation links.
+   Slides in from the left as the cursor hovers, before clicking. */
+.nav-underline {
+  position: relative;
+}
+.nav-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: theme('colors.brand.700');
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav-underline:hover::after {
+  transform: scaleX(1);
 }
 
 /* Right-moving marquee for reviews */

@@ -44,3 +44,15 @@ export const ClockIcon = (p) => (
 export const CheckIcon = (p) => (
   <svg {...base} {...p}><path d="M20 6 9 17l-5-5"/></svg>
 )
+export const BriefcaseIcon = (p) => (
+  <svg {...base} {...p}><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M2 13h20"/></svg>
+)
+export const MegaphoneIcon = (p) => (
+  <svg {...base} {...p}><path d="M3 11v2a1 1 0 0 0 1 1h2l6 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M16 8a4 4 0 0 1 0 8"/></svg>
+)
+export const WrenchIcon = (p) => (
+  <svg {...base} {...p}><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.7 2.7-2.3-2.3 2.7-2.7z"/></svg>
+)
+export const MailIcon = (p) => (
+  <svg {...base} {...p}><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+)

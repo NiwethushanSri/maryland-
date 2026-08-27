@@ -20,7 +20,7 @@ function Hero() {
     'Stationery',
   ]
   return (
-    <section id="home" className="relative overflow-hidden pt-16">
+    <section id="home" className="relative overflow-hidden pt-24">
       <div className="absolute inset-0 bg-gradient-to-br from-brand-800 via-brand-700 to-brand-900" />
       <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-brand-400/20 blur-3xl" />
       <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-accent-500/20 blur-3xl" />
@@ -36,7 +36,7 @@ function Hero() {
           </h1>
           <p className="mt-5 text-lg text-brand-100/90 max-w-2xl">
             Your local internet, technology &amp; parcel service in Stratford. Send money abroad,
-            print documents, browse the internet, grab a charger or drop off a DHL parcel — our team
+            print documents, browse the internet, grab a charger or drop off a DHL parcel, our team
             is here to help.
           </p>
 
@@ -69,9 +69,9 @@ function Hero() {
 
         <div className="mt-14 rounded-2xl bg-white p-4 sm:p-6 shadow-xl ring-1 ring-black/5">
           <img
-            src="/banner.png"
-            alt="Our services — internet surfing, printing & scanning, electronic items, mobile phones, mobile accessories, stationery and DHL parcel service (drop & pickup)"
-            className="mx-auto w-full max-w-5xl"
+            src="/banner.jpg"
+            alt="Our services, internet surfing, printing & scanning, electronic items, mobile phones, mobile accessories, stationery and DHL parcel service (drop & pickup)"
+            className="w-full"
             loading="eager"
           />
         </div>
@@ -85,13 +85,13 @@ function ServiceCard({ svc }) {
   return (
     <div
       id={svc.id}
-      className="group rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md hover:border-brand-100 transition-all"
+      className="group scroll-mt-28 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md hover:border-brand-100 transition-all"
     >
       <div className="grid h-12 w-12 place-items-center rounded-xl bg-brand-50 text-brand-700 group-hover:bg-brand-700 group-hover:text-white transition-colors">
         <Icon className="h-6 w-6" width="24" height="24" />
       </div>
       <h3 className="mt-4 text-lg font-bold text-slate-900">{svc.title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-slate-600">{svc.blurb}</p>
+      <p className="mt-2 text-left text-sm leading-relaxed text-slate-600">{svc.blurb}</p>
       <ul className="mt-4 space-y-1.5">
         {svc.items.map((it) => (
           <li key={it} className="flex items-start gap-2 text-sm text-slate-700">
@@ -100,6 +100,15 @@ function ServiceCard({ svc }) {
           </li>
         ))}
       </ul>
+      <Link
+        to={`/services/${svc.id}`}
+        className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 hover:text-brand-800"
+      >
+        Learn more
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </Link>
     </div>
   )
 }

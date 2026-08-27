@@ -131,7 +131,7 @@ export default function DHL() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden pt-16">
+      <section className="relative overflow-hidden pt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-800 via-brand-700 to-brand-900" />
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-accent-500/20 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-24 text-white">
@@ -142,7 +142,7 @@ export default function DHL() {
             Send &amp; Collect Parcels from Your Local Stratford Service Point
           </h1>
           <p className="mt-4 text-lg text-brand-100/90 max-w-2xl">
-            A convenient local option for dropping off or collecting eligible DHL parcels — without
+            A convenient local option for dropping off or collecting eligible DHL parcels, without
             travelling far. Sending, returning or collecting, our friendly team can help.
           </p>
         </div>
@@ -229,7 +229,7 @@ export default function DHL() {
               Don't have a printer at home? That's not a problem. We provide printing, scanning and
               computer services alongside our parcel facilities. Where appropriate, access your
               shipping documents from your email or online account and use our printing facilities to
-              prepare them — so you can access your label, print it and deal with your parcel from one
+              prepare them, so you can access your label, print it and deal with your parcel from one
               convenient location.
             </p>
           </div>
