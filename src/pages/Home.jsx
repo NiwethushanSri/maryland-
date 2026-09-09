@@ -72,20 +72,33 @@ function Hero() {
   )
 }
 
+const SERVICE_TILES = [
+  { src: '/electronic-items.jpg', label: 'Electronic items' },
+  { src: '/mobile-phones.jpg', label: 'Mobile phones' },
+  { src: '/mobile-accessories.jpg', label: 'Mobile phone accessories' },
+  { src: '/internet-surfing.jpg', label: 'Internet surfing' },
+  { src: '/printing-scanning.jpg', label: 'Printing & scanning service' },
+  { src: '/stationery.jpg', label: 'Stationery' },
+  { src: '/dhl.jpg', label: 'DHL parcel service (drop & pickup)' },
+  { src: '/western-union.jpg', label: 'Western Union' },
+  { src: '/ria.jpg', label: 'Ria Money Transfer' },
+  { src: '/moneygram.jpg', label: 'MoneyGram' },
+]
+
 function ServicesBanner() {
-  const alt =
-    'Our services, electronic items, mobile phones, mobile phone accessories, internet surfing, printing & scanning, stationery, DHL parcel service, Western Union, Ria and MoneyGram'
+  // Duplicate the set so the marquee loops seamlessly (translateX -50% to 0).
+  const tiles = [...SERVICE_TILES, ...SERVICE_TILES]
   return (
-    <section className="bg-white py-6 sm:py-8">
+    <section className="bg-white py-8 sm:py-10">
       <div className="marquee overflow-hidden">
         <div className="marquee-track items-center">
-          {Array.from({ length: 6 }).map((_, i) => (
+          {tiles.map((t, i) => (
             <img
               key={i}
-              src="/banner.jpg"
-              alt={i === 0 ? alt : ''}
-              aria-hidden={i === 0 ? undefined : 'true'}
-              className="mx-10 h-40 w-auto max-w-none shrink-0 sm:h-56 lg:h-72"
+              src={t.src}
+              alt={i < SERVICE_TILES.length ? t.label : ''}
+              aria-hidden={i < SERVICE_TILES.length ? undefined : 'true'}
+              className="mx-6 h-36 w-auto max-w-none shrink-0 object-contain sm:mx-8 sm:h-44 lg:h-52"
               loading="eager"
             />
           ))}
