@@ -62,6 +62,17 @@ export default function Footer() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Maryland Internet Cafe Ltd. All rights reserved.</p>
           <p>Company No. {BUSINESS.company.number} · Registered in England &amp; Wales</p>
+          <p>
+            Developed by{' '}
+            <a
+              href="https://www.forge9x.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-slate-400 hover:text-white transition-colors"
+            >
+              Forge9x
+            </a>
+          </p>
         </div>
       </div>
     </footer>

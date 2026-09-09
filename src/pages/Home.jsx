@@ -35,9 +35,9 @@ function Hero() {
             <span className="block text-brand-200">All in One Place</span>
           </h1>
           <p className="mt-5 text-lg text-brand-100/90 max-w-2xl">
-            Your local internet, technology &amp; parcel service in Stratford. Send money abroad,
-            print documents, browse the internet, grab a charger or drop off a DHL parcel, our team
-            is here to help.
+            We are expanding our range of useful electronic gadgets, mobile phones and accessories.
+            We also provide document printing and scanning, internet access, money transfer and
+            parcel services, all conveniently available in one place.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-2">
@@ -76,13 +76,13 @@ const SERVICE_TILES = [
   { src: '/electronic-items.jpg', label: 'Electronic items' },
   { src: '/mobile-phones.jpg', label: 'Mobile phones' },
   { src: '/mobile-accessories.jpg', label: 'Mobile phone accessories' },
-  { src: '/internet-surfing.jpg', label: 'Internet surfing' },
   { src: '/printing-scanning.jpg', label: 'Printing & scanning service' },
-  { src: '/stationery.jpg', label: 'Stationery' },
-  { src: '/dhl.jpg', label: 'DHL parcel service (drop & pickup)' },
+  { src: '/internet-surfing.jpg', label: 'Internet surfing' },
   { src: '/western-union.jpg', label: 'Western Union' },
   { src: '/ria.jpg', label: 'Ria Money Transfer' },
   { src: '/moneygram.jpg', label: 'MoneyGram' },
+  { src: '/dhl.jpg', label: 'DHL parcel service (drop & pickup)' },
+  { src: '/stationery.jpg', label: 'Stationery' },
 ]
 
 function ServicesBanner() {

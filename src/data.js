@@ -20,28 +20,10 @@ export const NAV = [
     label: 'Services',
     children: [
       {
-        label: 'Money Transfer Services',
-        to: '/services/money-transfer',
-        icon: 'MoneyIcon',
-        desc: 'Western Union, Ria & MoneyGram international transfers.',
-      },
-      {
-        label: 'Internet & Computer Services',
-        to: '/services/internet-printing',
-        icon: 'GlobeIcon',
-        desc: 'Internet access, computer use and online applications.',
-      },
-      {
-        label: 'Printing, Scanning & Documents',
-        to: '/services/printing',
-        icon: 'PrinterIcon',
-        desc: 'Printing, scanning, photocopying and document prep.',
-      },
-      {
-        label: 'DHL Parcel Service',
-        to: '/services/dhl',
-        icon: 'BoxIcon',
-        desc: 'Drop off and collect DHL parcels locally.',
+        label: 'Electronic Gadgets',
+        to: '/services/electronics',
+        icon: 'ChipIcon',
+        desc: 'Everyday tech essentials and replacement accessories.',
       },
       {
         label: 'Mobile Phones',
@@ -56,10 +38,28 @@ export const NAV = [
         desc: 'Chargers, cables, cases, earphones and more.',
       },
       {
-        label: 'Electronics',
-        to: '/services/electronics',
-        icon: 'ChipIcon',
-        desc: 'Everyday tech essentials and replacement accessories.',
+        label: 'Printing, Scanning & Documents',
+        to: '/services/printing',
+        icon: 'PrinterIcon',
+        desc: 'Printing, scanning, photocopying and document prep.',
+      },
+      {
+        label: 'Internet & Computer Services',
+        to: '/services/internet-printing',
+        icon: 'GlobeIcon',
+        desc: 'Internet access, computer use and online applications.',
+      },
+      {
+        label: 'Money Transfer Services',
+        to: '/services/money-transfer',
+        icon: 'MoneyIcon',
+        desc: 'Western Union, Ria & MoneyGram international transfers.',
+      },
+      {
+        label: 'DHL Parcel Service',
+        to: '/services/dhl',
+        icon: 'BoxIcon',
+        desc: 'Drop off and collect DHL parcels locally.',
       },
       {
         label: 'Stationery',
@@ -135,80 +135,17 @@ export const JOBS = [
 
 export const SERVICES = [
   {
-    id: 'money-transfer',
-    icon: 'MoneyIcon',
-    title: 'Money Transfer Services',
-    tagline: 'Send money overseas with confidence',
+    id: 'electronics',
+    icon: 'ChipIcon',
+    title: 'Electronic Gadgets',
+    tagline: 'Everyday technology essentials',
     blurb:
-      'Send money to family, friends and businesses overseas quickly and conveniently through leading international money transfer providers.',
+      'A selection of useful electronic products and accessories, everyday technology essentials without needing to travel far.',
     intro: [
-      'At Maryland Internet Cafe we make sending money abroad simple. Through trusted international providers, you can transfer funds to family, friends and businesses in countries around the world, all from our shop on Leytonstone Road in Stratford.',
-      'Our friendly team is on hand to guide you through the process, answer your questions and help make sure your transfer is completed correctly. Whether it is your first time sending money or you transfer regularly, we aim to make it quick, clear and stress-free.',
+      'We stock a selection of everyday electronic products and accessories to cover those small but essential items you sometimes need in a hurry, all without having to travel across London.',
+      'From replacement accessories to handy tech essentials, pop in and see what is available, or ask our team if there is something particular you are looking for.',
     ],
-    items: [
-      'Western Union',
-      'Ria Money Transfer',
-      'MoneyGram',
-      'International money transfer assistance',
-    ],
-  },
-  {
-    id: 'internet-printing',
-    icon: 'GlobeIcon',
-    title: 'Internet & Computer Services',
-    tagline: 'Stay connected and get things done',
-    blurb:
-      'Convenient computer and online services for personal, professional and educational use.',
-    intro: [
-      'Need to get online? Our computers are available for browsing the internet, checking emails, completing online applications and handling everyday digital tasks, whether for a few minutes or a longer session.',
-      'From students and jobseekers to professionals and visitors, our internet and computer facilities give the whole community convenient access to the online services they rely on, right here in Stratford.',
-    ],
-    items: [
-      'Internet surfing',
-      'Computer access',
-      'Online applications',
-      'Email access',
-      'Document preparation',
-      'Online form assistance',
-    ],
-  },
-  {
-    id: 'printing',
-    icon: 'PrinterIcon',
-    title: 'Printing, Scanning & Documents',
-    tagline: 'Print, scan and copy in one place',
-    blurb:
-      'Get your documents printed, scanned and prepared quickly from one convenient location.',
-    intro: [
-      'From a single page to a full set of documents, we help you print, scan, copy and prepare paperwork quickly and affordably. Bring your files on a USB stick, email them to us or access them online in store.',
-      'Whether you need to print travel documents, scan an application, photocopy important paperwork or send an email-to-print job, our team is here to help you get it done without the hassle of setting up your own equipment.',
-    ],
-    items: [
-      'Black & white printing',
-      'Colour printing',
-      'Document scanning',
-      'Photocopying',
-      'Email-to-print services',
-      'Application & form printing',
-    ],
-  },
-  {
-    id: 'dhl',
-    icon: 'BoxIcon',
-    title: 'DHL Parcel Service',
-    tagline: 'Drop off and collect parcels locally',
-    blurb:
-      'Send and receive parcels conveniently through our DHL parcel service, a simple, local option.',
-    intro: [
-      'As a convenient local point for DHL parcels, we make sending and receiving packages easy. Drop off your pre-labelled parcels with us or collect an incoming delivery, all from one handy Stratford location.',
-      'No need to travel far or wait around at home for a delivery. Our team can help you with the drop-off and collection process so your parcels are handled quickly and conveniently.',
-    ],
-    items: [
-      'DHL parcel drop-off',
-      'DHL parcel collection',
-      'Parcel sending assistance',
-      'Parcel pickup service',
-    ],
+    items: ['Everyday tech essentials', 'Replacement accessories', 'Convenient local access'],
   },
   {
     id: 'mobile',
@@ -243,17 +180,80 @@ export const SERVICES = [
     ],
   },
   {
-    id: 'electronics',
-    icon: 'ChipIcon',
-    title: 'Electronics',
-    tagline: 'Everyday technology essentials',
+    id: 'printing',
+    icon: 'PrinterIcon',
+    title: 'Printing, Scanning & Documents',
+    tagline: 'Print, scan and copy in one place',
     blurb:
-      'A selection of useful electronic products and accessories, everyday technology essentials without needing to travel far.',
+      'Get your documents printed, scanned and prepared quickly from one convenient location.',
     intro: [
-      'We stock a selection of everyday electronic products and accessories to cover those small but essential items you sometimes need in a hurry, all without having to travel across London.',
-      'From replacement accessories to handy tech essentials, pop in and see what is available, or ask our team if there is something particular you are looking for.',
+      'From a single page to a full set of documents, we help you print, scan, copy and prepare paperwork quickly and affordably. Bring your files on a USB stick, email them to us or access them online in store.',
+      'Whether you need to print travel documents, scan an application, photocopy important paperwork or send an email-to-print job, our team is here to help you get it done without the hassle of setting up your own equipment.',
     ],
-    items: ['Everyday tech essentials', 'Replacement accessories', 'Convenient local access'],
+    items: [
+      'Black & white printing',
+      'Colour printing',
+      'Document scanning',
+      'Photocopying',
+      'Email-to-print services',
+      'Application & form printing',
+    ],
+  },
+  {
+    id: 'internet-printing',
+    icon: 'GlobeIcon',
+    title: 'Internet & Computer Services',
+    tagline: 'Stay connected and get things done',
+    blurb:
+      'Convenient computer and online services for personal, professional and educational use.',
+    intro: [
+      'Need to get online? Our computers are available for browsing the internet, checking emails, completing online applications and handling everyday digital tasks, whether for a few minutes or a longer session.',
+      'From students and jobseekers to professionals and visitors, our internet and computer facilities give the whole community convenient access to the online services they rely on, right here in Stratford.',
+    ],
+    items: [
+      'Internet surfing',
+      'Computer access',
+      'Online applications',
+      'Email access',
+      'Document preparation',
+      'Online form assistance',
+    ],
+  },
+  {
+    id: 'money-transfer',
+    icon: 'MoneyIcon',
+    title: 'Money Transfer Services',
+    tagline: 'Send money overseas with confidence',
+    blurb:
+      'Send money to family, friends and businesses overseas quickly and conveniently through leading international money transfer providers.',
+    intro: [
+      'At Maryland Internet Cafe we make sending money abroad simple. Through trusted international providers, you can transfer funds to family, friends and businesses in countries around the world, all from our shop on Leytonstone Road in Stratford.',
+      'Our friendly team is on hand to guide you through the process, answer your questions and help make sure your transfer is completed correctly. Whether it is your first time sending money or you transfer regularly, we aim to make it quick, clear and stress-free.',
+    ],
+    items: [
+      'Western Union',
+      'Ria Money Transfer',
+      'MoneyGram',
+      'International money transfer assistance',
+    ],
+  },
+  {
+    id: 'dhl',
+    icon: 'BoxIcon',
+    title: 'DHL Parcel Service',
+    tagline: 'Drop off and collect parcels locally',
+    blurb:
+      'Send and receive parcels conveniently through our DHL parcel service, a simple, local option.',
+    intro: [
+      'As a convenient local point for DHL parcels, we make sending and receiving packages easy. Drop off your pre-labelled parcels with us or collect an incoming delivery, all from one handy Stratford location.',
+      'No need to travel far or wait around at home for a delivery. Our team can help you with the drop-off and collection process so your parcels are handled quickly and conveniently.',
+    ],
+    items: [
+      'DHL parcel drop-off',
+      'DHL parcel collection',
+      'Parcel sending assistance',
+      'Parcel pickup service',
+    ],
   },
   {
     id: 'stationery',
